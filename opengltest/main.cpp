@@ -1,7 +1,6 @@
 #include <QtGui/QApplication>
 #include "MainWindow.h"
 
-#include "accumebuffertest.h"
 
 int main(int argc, char *argv[])
 {
