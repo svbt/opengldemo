@@ -23,6 +23,10 @@
 #include "texturemipmap.h"
 #include "texturegeneration.h"
 #include "stencilbuffertest.h"
+#include "beziercurve.h"
+#include "beziersurface.h"
+#include "beziermesh.h"
+#include "beziertexturesurface.h"
 #define MAX_TIMER 25
 
 class MainWindow : public QMainWindow
@@ -53,6 +57,10 @@ private:
     texturemipmap * _texturemipmap;
     texturegeneration * _texturegeneration;
     stencilbuffertest * _stencilbuffertest;
+    beziercurve * _beziercurve;
+    beziersurface * _beziersurface;
+    beziermesh * _beziermesh;
+    beziertexturesurface * _beziertexturesurface;
 public slots:
     void exitGlWidget();
     void exitQLight();
@@ -72,6 +80,10 @@ public slots:
     void exittexturemipmap();
     void exittexturegeneration();
     void exitstencilbuffertest();
+    void exitbeziercurve();
+    void exitbeziersurface();
+    void exitbeziermesh();
+    void exitbeziertexturesurface();
 };
 
 #endif // MAINWINDOW_H

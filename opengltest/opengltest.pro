@@ -40,7 +40,11 @@ SOURCES += main.cpp\
     texturegeneration.cpp \
     stencilbuffertest.cpp \
     accumebuffertest.cpp \
-    objectquadric.cpp
+    objectquadric.cpp \
+    beziercurve.cpp \
+    beziersurface.cpp \
+    beziermesh.cpp \
+    beziertexturesurface.cpp
 
 HEADERS  += mainwindow.h \
     qlinestipple.h \
@@ -69,4 +73,8 @@ HEADERS  += mainwindow.h \
     stencilbuffertest.h \
     accumebuffertest.h \
     jitter.h \
-    objectquadric.h
+    objectquadric.h \
+    beziercurve.h \
+    beziersurface.h \
+    beziermesh.h \
+    beziertexturesurface.h

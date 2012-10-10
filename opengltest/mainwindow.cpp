@@ -211,6 +211,50 @@ void MainWindow::exitstencilbuffertest()
     timer[17].stop();
     _stencilbuffertest->hide();
 
+    _beziercurve = new beziercurve(this);
+    _beziercurve->show();
+    connect(&timer[18], SIGNAL(timeout()), this, SLOT( exitbeziercurve()));
+    timer[18].start(1000);
+
+}
+
+void MainWindow::exitbeziercurve()
+{
+  timer[18].stop();
+  _beziercurve->hide();
+
+  _beziersurface = new beziersurface(this);
+  _beziersurface->show();
+  connect(&timer[19], SIGNAL(timeout()), this, SLOT( exitbeziersurface()));
+  timer[19].start(1000);
+}
+
+void MainWindow::exitbeziersurface()
+{
+    timer[19].stop();
+    _beziersurface->hide();
+
+    _beziermesh = new beziermesh(this);
+    _beziermesh->show();
+    connect(&timer[20], SIGNAL(timeout()), this, SLOT( exitbeziermesh()));
+    timer[20].start(1000);
+}
+
+void MainWindow::exitbeziermesh()
+{
+    timer[20].stop();
+    _beziermesh->hide();
+
+    _beziertexturesurface = new beziertexturesurface(this);
+    _beziertexturesurface->show();
+    connect(&timer[21], SIGNAL(timeout()), this, SLOT( exitbeziertexturesurface()));
+    timer[21].start(1000);
+}
+
+void MainWindow::exitbeziertexturesurface()
+{
+    timer[21].stop();
+    _beziertexturesurface->hide();
 }
 
 MainWindow::~MainWindow()
