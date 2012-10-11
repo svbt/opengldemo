@@ -44,3 +44,12 @@ void qcolorgl::resizeGL(int w, int h)
     gluOrtho2D (0.0, 30.0*(GLfloat) w/(GLfloat) h, 0.0, 30.0);
     glMatrixMode(GL_MODELVIEW);
 }
+
+void qcolorgl::mousePressEvent( QMouseEvent *e )
+{
+    if(e->buttons()==Qt::LeftButton | Qt::RightButton)
+    {
+        static qcolorgl openanotherwindow;
+        openanotherwindow.show();
+    }
+}

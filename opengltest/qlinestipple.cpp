@@ -1,5 +1,11 @@
 #include "qlinestipple.h"
-
+/*
+qlinestipple::qlinestipple()
+{
+    this->setMaximumSize(500,500);
+    this->setMinimumSize(500,500);
+}
+*/
 qlinestipple::qlinestipple(QWidget *parent)
     : QGLWidget(parent)
 {
@@ -27,8 +33,8 @@ void qlinestipple::resizeGL(int w, int h)
 void qlinestipple::paintGL()
 {
     int i;
-
     glClear (GL_COLOR_BUFFER_BIT);
+
  /* select white for all lines  */
     glColor3f (1.0, 1.0, 1.0);
 
@@ -73,4 +79,13 @@ void qlinestipple::paintGL()
     glDisable (GL_LINE_STIPPLE);
     glFlush ();
 
+}
+
+void qlinestipple::mousePressEvent( QMouseEvent *e )
+{
+    if(e->buttons()==Qt::LeftButton | Qt::RightButton)
+    {
+        static qlinestipple openanotherwindow;
+        openanotherwindow.show();
+    }
 }

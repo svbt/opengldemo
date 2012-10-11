@@ -3,6 +3,7 @@
 
 #include <QGLWidget>
 #include <QKeyEvent>
+#include <QMouseEvent>
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -28,6 +29,7 @@ public:
     void paintGL();
     void resizeGL(int w, int h);
     void keyPressEvent ( QKeyEvent * event );
+    void mousePressEvent( QMouseEvent *e );
 
     void animate();
 

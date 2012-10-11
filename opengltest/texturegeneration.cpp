@@ -130,3 +130,12 @@ void texturegeneration::keyPressEvent ( QKeyEvent * event )
       break;
    };
 }
+
+void texturegeneration::mousePressEvent( QMouseEvent *e )
+{
+    if(e->buttons()==Qt::LeftButton | Qt::RightButton)
+    {
+        static texturegeneration openanotherwindow;
+        openanotherwindow.show();
+    }
+}

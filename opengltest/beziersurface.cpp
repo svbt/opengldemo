@@ -62,3 +62,12 @@ void beziersurface::resizeGL(int w, int h)
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
 }
+
+void beziersurface::mousePressEvent( QMouseEvent *e )
+{
+    if(e->buttons()==Qt::LeftButton | Qt::RightButton)
+    {
+        static beziersurface openanotherwindow;
+        openanotherwindow.show();
+    }
+}

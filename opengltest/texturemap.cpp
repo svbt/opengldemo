@@ -78,3 +78,12 @@ void texturemap::resizeGL(int w, int h)
     glLoadIdentity();
     glTranslatef(0.0, 0.0, -3.6);
 }
+
+void texturemap::mousePressEvent( QMouseEvent *e )
+{
+    if(e->buttons()==Qt::LeftButton | Qt::RightButton)
+    {
+        static texturemap openanotherwindow;
+        openanotherwindow.show();
+    }
+}

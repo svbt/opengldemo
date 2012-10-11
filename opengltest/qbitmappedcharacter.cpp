@@ -40,3 +40,12 @@ void qbitmappedcharacter::resizeGL(int w, int h)
     glOrtho (0, w, 0, h, -1.0, 1.0);
     glMatrixMode(GL_MODELVIEW);
 }
+
+void qbitmappedcharacter::mousePressEvent( QMouseEvent *e )
+{
+    if(e->buttons()==Qt::LeftButton | Qt::RightButton)
+    {
+        static qbitmappedcharacter openanotherwindow;
+        openanotherwindow.show();
+    }
+}

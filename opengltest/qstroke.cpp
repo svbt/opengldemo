@@ -130,3 +130,11 @@ void qstroke::keyPressEvent ( QKeyEvent * event )
    };
 }
 
+void qstroke::mousePressEvent( QMouseEvent *e )
+{
+    if(e->buttons()==Qt::LeftButton | Qt::RightButton)
+    {
+        static qstroke openanotherwindow;
+        openanotherwindow.show();
+    }
+}

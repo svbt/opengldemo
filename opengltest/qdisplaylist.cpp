@@ -60,3 +60,12 @@ void qdisplaylist::resizeGL(int w, int h)
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
 }
+
+void qdisplaylist::mousePressEvent( QMouseEvent *e )
+{
+    if(e->buttons()==Qt::LeftButton | Qt::RightButton)
+    {
+        static qdisplaylist openanotherwindow;
+        openanotherwindow.show();
+    }
+}

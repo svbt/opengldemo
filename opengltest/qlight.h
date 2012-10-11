@@ -2,6 +2,7 @@
 #define QLIGHT_H
 
 #include <QGLWidget>
+#include <QMouseEvent>
 #include <GL/gl.h>
 #include <GL/glu.h>
 #include <glut.h>
@@ -11,7 +12,7 @@ class qlight : public QGLWidget
     Q_OBJECT
 
 public:
-    //qlight(QWidget *parent = 0);
+    qlight(){}
 
     qlight(QWidget *parent)
         : QGLWidget(parent)
@@ -55,6 +56,15 @@ public:
         1.5*(GLfloat)w/(GLfloat)h, -1.5, 1.5, -10.0, 10.0);
         glMatrixMode(GL_MODELVIEW);
         glLoadIdentity();
+    }
+
+    void mousePressEvent( QMouseEvent *e )
+    {
+        if(e->buttons()==Qt::LeftButton | Qt::RightButton)
+        {
+            static qlight openanotherwindow;
+            openanotherwindow.show();
+        }
     }
 
 signals:

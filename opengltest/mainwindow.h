@@ -61,6 +61,7 @@ private:
     beziersurface * _beziersurface;
     beziermesh * _beziermesh;
     beziertexturesurface * _beziertexturesurface;
+
 public slots:
     void exitGlWidget();
     void exitQLight();

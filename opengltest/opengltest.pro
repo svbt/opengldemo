@@ -32,15 +32,12 @@ SOURCES += main.cpp\
     qstroke.cpp \
     qbitmappedcharacter.cpp \
     qfontbitmap.cpp \
-    image.cpp \
     texturemap.cpp \
     texturemapsub.cpp \
     texturemipmap.cpp \
     texturebind.cpp \
     texturegeneration.cpp \
     stencilbuffertest.cpp \
-    accumebuffertest.cpp \
-    objectquadric.cpp \
     beziercurve.cpp \
     beziersurface.cpp \
     beziermesh.cpp \
@@ -64,16 +61,12 @@ HEADERS  += mainwindow.h \
     qstroke.h \
     qbitmappedcharacter.h \
     qfontbitmap.h \
-    image.h \
     texturemap.h \
     texturemapsub.h \
     texturemipmap.h \
     texturebind.h \
     texturegeneration.h \
     stencilbuffertest.h \
-    accumebuffertest.h \
-    jitter.h \
-    objectquadric.h \
     beziercurve.h \
     beziersurface.h \
     beziermesh.h \

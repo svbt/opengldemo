@@ -50,3 +50,12 @@ void beziercurve::resizeGL(int w, int h)
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
 }
+
+void beziercurve::mousePressEvent( QMouseEvent *e )
+{
+    if(e->buttons()==Qt::LeftButton | Qt::RightButton)
+    {
+        static beziercurve openanotherwindow;
+        openanotherwindow.show();
+    }
+}

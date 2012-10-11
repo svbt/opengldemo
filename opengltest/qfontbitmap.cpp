@@ -95,3 +95,12 @@ void qfontbitmap::resizeGL(int w, int h)
     glOrtho (0.0, w, 0.0, h, -1.0, 1.0);
     glMatrixMode(GL_MODELVIEW);
 }
+
+void qfontbitmap::mousePressEvent( QMouseEvent *e )
+{
+    if(e->buttons()==Qt::LeftButton | Qt::RightButton)
+    {
+        static qfontbitmap openanotherwindow;
+        openanotherwindow.show();
+    }
+}

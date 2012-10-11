@@ -109,3 +109,11 @@ void qantialias::keyPressEvent(QKeyEvent * event)
     }
 }
 
+void qantialias::mousePressEvent( QMouseEvent *e )
+{
+    if(e->buttons()==Qt::LeftButton | Qt::RightButton)
+    {
+        static qantialias openanotherwindow;
+        openanotherwindow.show();
+    }
+}

@@ -95,3 +95,12 @@ void texturebind::resizeGL(int w, int h)
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
 }
+
+void texturebind::mousePressEvent( QMouseEvent *e )
+{
+    if(e->buttons()==Qt::LeftButton | Qt::RightButton)
+    {
+        static texturebind openanotherwindow;
+        openanotherwindow.show();
+    }
+}

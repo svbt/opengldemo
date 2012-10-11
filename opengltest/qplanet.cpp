@@ -72,3 +72,12 @@ void qplanet::keyPressEvent ( QKeyEvent * event )
       break;
    };
 }
+
+void qplanet::mousePressEvent( QMouseEvent *e )
+{
+    if(e->buttons()==Qt::LeftButton | Qt::RightButton)
+    {
+        static qplanet openanotherwindow;
+        openanotherwindow.show();
+    }
+}

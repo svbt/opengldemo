@@ -69,3 +69,12 @@ void beziermesh::resizeGL(int w, int h)
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
 }
+
+void beziermesh::mousePressEvent( QMouseEvent *e )
+{
+    if(e->buttons()==Qt::LeftButton | Qt::RightButton)
+    {
+        static beziermesh openanotherwindow;
+        openanotherwindow.show();
+    }
+}

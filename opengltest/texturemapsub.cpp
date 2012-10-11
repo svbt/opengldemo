@@ -119,3 +119,12 @@ void texturemapsub::keyPressEvent ( QKeyEvent * event )
       break;
    };
 }
+
+void texturemapsub::mousePressEvent( QMouseEvent *e )
+{
+    if(e->buttons()==Qt::LeftButton | Qt::RightButton)
+    {
+        static texturemapsub openanotherwindow;
+        openanotherwindow.show();
+    }
+}

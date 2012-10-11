@@ -88,3 +88,12 @@ void beziertexturesurface::resizeGL(int w, int h)
     glLoadIdentity();
     glRotatef(85.0, 1.0, 1.0, 1.0);
 }
+
+void beziertexturesurface::mousePressEvent( QMouseEvent *e )
+{
+    if(e->buttons()==Qt::LeftButton | Qt::RightButton)
+    {
+        static beziertexturesurface openanotherwindow;
+        openanotherwindow.show();
+    }
+}

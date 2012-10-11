@@ -100,3 +100,12 @@ void qrobot::keyPressEvent ( QKeyEvent * event )
       break;
    };
 }
+
+void qrobot::mousePressEvent( QMouseEvent *e )
+{
+    if(e->buttons()==Qt::LeftButton | Qt::RightButton)
+    {
+        static qrobot openanotherwindow;
+        openanotherwindow.show();
+    }
+}

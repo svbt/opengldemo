@@ -102,3 +102,12 @@ void qfog::keyPressEvent ( QKeyEvent * event )
       break;
    };
 }
+
+void qfog::mousePressEvent( QMouseEvent *e )
+{
+    if(e->buttons()==Qt::LeftButton | Qt::RightButton)
+    {
+        static qfog openanotherwindow;
+        openanotherwindow.show();
+    }
+}

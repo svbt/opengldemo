@@ -88,3 +88,12 @@ void qtorus::keyPressEvent ( QKeyEvent * event )
       break;
    };
 }
+
+void qtorus::mousePressEvent( QMouseEvent *e )
+{
+    if(e->buttons()==Qt::LeftButton | Qt::RightButton)
+    {
+        static qtorus openanotherwindow;
+        openanotherwindow.show();
+    }
+}

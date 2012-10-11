@@ -74,3 +74,12 @@ void qpolys::paintGL()
     glFlush ();
 
 }
+
+void qpolys::mousePressEvent( QMouseEvent *e )
+{
+    if(e->buttons()==Qt::LeftButton | Qt::RightButton)
+    {
+        static qpolys openanotherwindow;
+        openanotherwindow.show();
+    }
+}

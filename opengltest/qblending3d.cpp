@@ -110,3 +110,11 @@ void qblending3d::keyPressEvent ( QKeyEvent * event )
      };
 }
 
+void qblending3d::mousePressEvent( QMouseEvent *e )
+{
+    if(e->buttons()==Qt::LeftButton | Qt::RightButton)
+    {
+        static qblending3d openanotherwindow;
+        openanotherwindow.show();
+    }
+}

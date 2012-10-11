@@ -92,3 +92,12 @@ void stencilbuffertest::resizeGL(int w, int h)
     glLoadIdentity();
     glTranslatef(0.0, 0.0, -5.0);
 }
+
+void stencilbuffertest::mousePressEvent( QMouseEvent *e )
+{
+    if(e->buttons()==Qt::LeftButton | Qt::RightButton)
+    {
+        static stencilbuffertest openanotherwindow;
+        openanotherwindow.show();
+    }
+}

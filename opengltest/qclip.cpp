@@ -41,3 +41,12 @@ void qclip::resizeGL(int w, int h)
     gluPerspective(60.0, (GLfloat) w/(GLfloat) h, 1.0, 20.0);
     glMatrixMode (GL_MODELVIEW);
 }
+
+void qclip::mousePressEvent( QMouseEvent *e )
+{
+    if(e->buttons()==Qt::LeftButton | Qt::RightButton)
+    {
+        static qclip openanotherwindow;
+        openanotherwindow.show();
+    }
+}

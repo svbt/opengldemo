@@ -3,7 +3,7 @@
 
 #include <QGLWidget>
 #include <QKeyEvent>
-
+#include <QMouseEvent>
 #include <GL/gl.h>
 #include <GL/glu.h>
 #include <glut.h>
@@ -20,6 +20,7 @@ public:
     void resizeGL(int w, int h);
     void keyPressEvent ( QKeyEvent * event );
     void makeCheckImage(void);
+    void mousePressEvent( QMouseEvent *e );
 
 signals:
 

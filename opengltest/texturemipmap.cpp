@@ -118,3 +118,12 @@ void texturemipmap::resizeGL(int w, int h)
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
 }
+
+void texturemipmap::mousePressEvent( QMouseEvent *e )
+{
+    if(e->buttons()==Qt::LeftButton | Qt::RightButton)
+    {
+        static texturemipmap openanotherwindow;
+        openanotherwindow.show();
+    }
+}

@@ -80,3 +80,12 @@ void qblending::keyPressEvent ( QKeyEvent * event )
         break;
      };
 }
+
+void qblending::mousePressEvent( QMouseEvent *e )
+{
+    if(e->buttons()==Qt::LeftButton | Qt::RightButton)
+    {
+        static qblending openanotherwindow;
+        openanotherwindow.show();
+    }
+}
