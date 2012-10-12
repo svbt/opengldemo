@@ -11,9 +11,9 @@ TEMPLATE = app
 
 
 LIBS += -lglut32
-LIBS += -LC:\Qt\qtcreator-2.0.0\opengltest-build-desktop\glut
+LIBS += -L..\lib\glut
 
-INCLUDEPATH += C:\Qt\qtcreator-2.0.0\opengltest-build-desktop\glut
+INCLUDEPATH += ..\lib\glut
 
 SOURCES += main.cpp\
         qlinestipple.cpp \
