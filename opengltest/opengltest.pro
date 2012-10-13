@@ -13,7 +13,8 @@ TEMPLATE = app
 LIBS += -lglut32
 LIBS += -L..\lib\glut
 
-INCLUDEPATH += ..\lib\glut
+INCLUDEPATH += ..\lib\glut \
+               ..\games\tictactoe
 
 SOURCES += main.cpp\
         qlinestipple.cpp \
@@ -41,7 +42,8 @@ SOURCES += main.cpp\
     beziercurve.cpp \
     beziersurface.cpp \
     beziermesh.cpp \
-    beziertexturesurface.cpp
+    beziertexturesurface.cpp \
+    ../games/tictactoe/tictactoe.cpp
 
 HEADERS  += mainwindow.h \
     qlinestipple.h \
@@ -70,4 +72,5 @@ HEADERS  += mainwindow.h \
     beziercurve.h \
     beziersurface.h \
     beziermesh.h \
-    beziertexturesurface.h
+    beziertexturesurface.h \
+    ../games/tictactoe/tictactoe.h
